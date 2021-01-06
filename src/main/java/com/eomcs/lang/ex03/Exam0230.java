@@ -6,7 +6,7 @@ package com.eomcs.lang.ex03;
 //
 public class Exam0230 {
   public static void main(String[] args) {
-    //## 4바이트 정수
+    //## 4바이트 정수 int (32bit)
     //접미사를 붙이지 않고 그냥 숫자를 표현하면 4바이트 크기의 메모리에 저장되는 정수를 표현한다.
     System.out.println(2147483647); // 4바이트 양의 정수 최대값
     System.out.println(-2147483648); // 4바이트 음의 정수 최소값
@@ -15,7 +15,7 @@ public class Exam0230 {
     //System.out.println(2147483648);
     //System.out.println(-2147483649);
     
-    //## 8바이트 정수
+    //## 8바이트 정수 () long(64bit)
     //4바이트 메모리를 벗어나는 정수 값을 표현할 때 사용한다.
     //숫자 뒤에 L 또는 l을 붙인다.
     //보통 대문자를 붙인다. 왜? 소문자 l은 숫자 1과 헷갈리기 때문이다.
