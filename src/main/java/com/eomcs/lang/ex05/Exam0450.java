@@ -1,6 +1,6 @@
 package com.eomcs.lang.ex05;
 
-//# 비트 이동 연산자 : 응용 II
+//# 비트 연산자 : 응용 II
 //
 public class Exam0450 {
   public static void main(String[] args) {
@@ -10,6 +10,7 @@ public class Exam0450 {
     // 비트 연산자 사용 전
     // => 각각의 상태를 별도의 변수에 저장해야 한다.
     // => 8개의 데이터를 저장하기 위해 32바이트가 소요된다.
+    // me) boolean은 그냥 저장할 때는 4byte 저장소를 사용하고 배열을 다룰 때는 1byte
     boolean c, cpp, java, js, python, php, html, css;
     c = true;
     cpp = false;

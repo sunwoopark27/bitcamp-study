@@ -4,7 +4,7 @@ package com.eomcs.lang.ex06;
 //
 public class Exam0120 {
   public static void main(String[] args) {
-    int age = 17;
+    int age = 18;
 
     // => if (조건) {문장1; 문장2;}
     //    조건이 참일 때 여러 개의 문장을 실행하고 싶다면
@@ -13,9 +13,9 @@ public class Exam0120 {
     // => 들여쓰기는 문법에 영향을 끼치지 않는다.
     if (age >= 19) 
       System.out.println("성인이다."); // 이 문장만 if에 소속된다.
-      System.out.println("군대 가야한다.");
-      System.out.println("일해야 한다.");
-      System.out.println("세금 납부해야 한다.");
+    System.out.println("군대 가야한다.");
+    System.out.println("일해야 한다.");
+    System.out.println("세금 납부해야 한다.");
 
     System.out.println("------------------------------");
 

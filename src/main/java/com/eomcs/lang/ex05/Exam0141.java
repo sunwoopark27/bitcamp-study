@@ -4,9 +4,9 @@ package com.eomcs.lang.ex05;
 //
 public class Exam0141 {
   public static void main(String[] args) {
-    
+
     // 연산을 수행한 후 생성된 결과도 피연산자와 같은 타입이다.
-    
+
     int i = 5;
     int j = 2;
     float r = i / j; // int와 int의 연산 결과는 항상 int이다.
