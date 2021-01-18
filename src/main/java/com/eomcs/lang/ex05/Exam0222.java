@@ -36,7 +36,7 @@ public class Exam0222 {
     //
     // => 0 10000010 10101101011110001101010
     //    
-    
+
     float x = 11.221f;
     float y = 2.2f;
     System.out.println((x + y) == 13.421f);
