@@ -13,6 +13,5 @@ public class Exam0412 {
       System.out.println(i);
       i++;
     }
-
   }
 }
