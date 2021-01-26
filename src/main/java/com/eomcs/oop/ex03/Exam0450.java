@@ -8,6 +8,7 @@ class X {
   private X() {
     System.out.println("X()");
   }
+
 }
 
 public class Exam0450 {
