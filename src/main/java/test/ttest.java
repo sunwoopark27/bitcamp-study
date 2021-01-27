@@ -4,42 +4,20 @@ public class ttest {
 
   public static void main(String[] args) {
 
-    class Score{
-      String name;
-      int kor;
-      int eng;
-      int math;
-    }
+    // 다음 식을 연산자 우선 순위를 고려하지 않고 순서대로 계산하라!
+    // 2 + 3 - 1 * 7 / 3 = ?
 
-    final int LENGTH = 3;
-    Score[] scores = new Score[LENGTH];
+    Calculator c1 = new Calculator();
 
-    for(int i = 0; i < LENGTH; i++) {
-      scores[i] = new Score();
-    }
-    scores[0].name = "홍길동";
-    scores[0].kor = 100;
-    scores[0].eng = 100;
-    scores[0].math = 100;
+    c1.plus(2);
+    c1.plus(3);
+    c1.minus(1);
+    c1.multiply(7);
+    c1.divide(3);
 
-    scores[1].name = "임꺽정";
-    scores[1].kor = 100;
-    scores[1].eng = 100;
-    scores[1].math = 100;
-
-    scores[2].name = "유관순";
-    scores[2].kor = 100;
-    scores[2].eng = 100;
-    scores[2].math = 100;
-
-
-    for(int i = 0; i < LENGTH; i++) {
-
-      System.out.printf("%s, %d, %d, %d\n", scores[i].name, scores[i].kor, scores[i].eng, scores[i].math);
-    }
-
-
+    System.out.println(c1.result);
 
   }
+
 
 }

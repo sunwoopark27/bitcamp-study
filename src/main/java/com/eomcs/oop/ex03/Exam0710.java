@@ -13,8 +13,7 @@ public class Exam0710 {
     //   별도의 블록으로 뽑아내는 것이 소스 코드 관리에 좋다.
     // - 이럴 때 사용하라고 만든 문법이 인스턴스 블록이다.
     // - 다음과 같이 인스턴스 초기화 블록을 사용하여 
-    //   생성자에 공통으로 들어갈
-    //   코드를 작성하면 된다.
+    //   생성자에 공통으로 들어갈 코드를 작성하면 된다.
     //
     {
       a = 100;
@@ -25,10 +24,10 @@ public class Exam0710 {
     // - 기본 생성자가 만들어지고 앞 부분에 삽입된다.
     // - 바이트코드(Exam0710$A.class)를 확인해 보라!
     //
-    // public A() {
-    //   a = 100;
-    //   System.out.println("Hello!");
-    // }
+    //    public A() {
+    //      a = 100;
+    //      System.out.println("Hello!");
+    //    }
   }
 
   public static void main(String[] args) {
