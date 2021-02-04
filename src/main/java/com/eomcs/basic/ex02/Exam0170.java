@@ -6,7 +6,7 @@ public class Exam0170 {
 
     // String 클래스의 스태틱 메서드 활용
     String s1 = String.format("%s님의 나이는 %d입니다.", "홍길동", 20);
-    System.out.println(s1);
+    System.out.print(s1);
 
     // 기본 데이터 타입의 값을 문자열로 만들기
     String s2 = String.valueOf(true); // true => "true"

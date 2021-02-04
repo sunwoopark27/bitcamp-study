@@ -24,7 +24,7 @@ public class Exam0113 {
         (byte)0xea, (byte)0xb0, (byte)0x80, // 가
         (byte)0xea, (byte)0xb0, (byte)0x81, // 각
         (byte)0xeb, (byte)0x98, (byte)0x98, // 똘
-        (byte)0xeb, (byte)0x98, (byte)0xa5  // 똠
+        (byte)0xeb, (byte)0x98, (byte)0xa5  // 똥
     };
 
     String s1 = new String(bytes);

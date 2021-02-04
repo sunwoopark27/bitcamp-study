@@ -2,7 +2,18 @@
 package com.eomcs.basic.ex02;
 
 public class Exam0230 {
+
+  static void compare(Integer i1, Integer i2) {
+    if(i1.equals(i2)) { //== 쓰지마
+      System.out.println("두 숫자는 같습니다.");
+    }else {
+      System.out.println("두 숫자는 같습니다.");
+    }
+  }
+
   public static void main(String[] args) {
+
+    compare(128, 128);
 
     // new 명령을 사용하여 Integer 객체를 만들면
     // 무조건 새 인스턴스를 생성한다.

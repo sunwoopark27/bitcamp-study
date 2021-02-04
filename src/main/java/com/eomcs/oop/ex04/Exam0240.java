@@ -8,7 +8,7 @@ public class Exam0240 {
     Date d1 = new Date();
 
     String str0 = d1.toString();
-    System.out.println(str0); //util.Date 와 sql.Date의 차이 출력에 차이가 있음
+    System.out.println(str0);
 
     // 인스턴스 메서드 활용
     System.out.println(d1.getYear() + 1900);

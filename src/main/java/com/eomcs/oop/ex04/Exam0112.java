@@ -6,7 +6,7 @@ import java.nio.charset.Charset;
 public class Exam0112 {
 
   public static void main(String[] args) throws Exception {
-    System.out.println(Charset.defaultCharset()); //기본 charset 나와
+    System.out.println(Charset.defaultCharset());
 
     // 한글 문자 코드의 바이트 배열을 가지고 String 인스턴스 초기화시키기.
     byte[] bytes = {
