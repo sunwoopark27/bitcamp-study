@@ -8,6 +8,7 @@ interface MyInterface5 {
   }
 }
 
+
 class MyInterface5Impl implements MyInterface5 {
 
 }
