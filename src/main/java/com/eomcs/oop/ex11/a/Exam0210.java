@@ -18,6 +18,9 @@ public class Exam0210 {
 
   // 2) non-static nested class = inner class
   // => 바깥 클래스의 인스턴스에 종속되는 클래스.
+  //    즉 중첩 클래스에서 바깥 클래스의 인스턴스 멤버를 사용한다는 뜻이다.
+  //    바깥 클래스의 인스턴스 없이 작업할 수 없는 경우
+  //    중첩 클래스를 non-static nested class 로 정의한다.
   // => 바깥 클래스의 인스턴스 없이 생성할 수 없다. 
   class B {}
 
@@ -41,6 +44,9 @@ public class Exam0210 {
     // => 문법
     //      new 수퍼클래스() {클래스 정의}
     //      new 인터페이스() {클래스 정의}
+    // => 주의!
+    //      new extends 수퍼클래스 implements 인터페이스 {클래스 정의} <== 이런 문법은 없다.
+    //      수퍼 클래스르 지정하거나 인터페이스를 지정하거나 둘 중 하나만 해야한다.
 
     Object obj = new Object() {
       // Object 클래스를 상속 받은 익명 클래스를 만들고,
