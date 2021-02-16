@@ -21,7 +21,6 @@ interface MyInterface3 {
   default void m3() {
     System.out.println("MyInterface3.m3()");
   };
-
 }
 
 // 2) 인터페이스 구현

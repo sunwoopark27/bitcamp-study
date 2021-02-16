@@ -19,8 +19,10 @@ class C {
     // 그래서 inner class 를 사용할 수 있다.
     X obj = this.new X();
     obj.test();
+
     X obj2 = new X(); // 인스턴스 필드나 메서드와 마찬가지로 this를 생략할 수 있다.
     obj2.test();
+
   }
 
   class X {

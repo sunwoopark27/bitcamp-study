@@ -6,14 +6,14 @@ import java.util.Arrays;
 public class Exam01 {
 
   static int[] createRandomNumbers(final int size) {
-    //size만큼의 배열을 만들고 그 size만큼의 숫자를 랜덤하게 담아
     int[] arr = new int[size];
-    for (int i =0; i < size; i++) {
+    for (int i = 0; i < size; i++) {
       arr[i] = i;
     }
+
     int count = size >> 1;
-    for(int i = 0; i < count; i++) {
-      int index1 = (int)(Math.random() * size);
+    for (int i = 0; i < count; i++) {
+      int index1 = (int)(Math.random() * size); 
       int index2 = (int)(Math.random() * size);
       int temp = arr[index1];
       arr[index1] = arr[index2];
@@ -21,10 +21,11 @@ public class Exam01 {
     }
     return arr;
   }
+
   public static void main(String[] args) {
 
     int[] values = createRandomNumbers(100000);
-    int[] values2 = Arrays.copyOf(values, values.length); // 똑같이 복제
+    int[] values2 = Arrays.copyOf(values, values.length);
 
     BubbleSort s1 = new BubbleSort();
     QuickSort s2 = new QuickSort();
@@ -44,21 +45,19 @@ public class Exam01 {
   // 그 값을 정렬한 후 출력하는 메서드이다.
   static void display(BubbleSort sorter, int[] values) {
 
-    //System.out.println("[정렬전]");
-    // 정렬 전 값을 출력한다.
-    //printNumbers(values);    
+    //System.out.println("[정렬 전]");
+    //printNumbers(values);
 
-    long start = System.currentTimeMillis();//시간 체크
+    long start = System.currentTimeMillis();
 
     // BubbleSort 사용법에 맞춰 정렬을 수행한다.
     sorter.run(values);
 
     long end = System.currentTimeMillis();
-    System.out.printf("걸린시간: %d\n" ,end - start);
+    System.out.printf("걸린시간: %d\n", end - start);
 
-    //System.out.println("[정렬 후]---------------------------");
+    //System.out.println("[정렬 후]--------------------------");
     //printNumbers(values);
-
   }
 
   static void display(QuickSort sorter, int[] values) {
@@ -66,19 +65,19 @@ public class Exam01 {
     //System.out.println("[정렬 전]");
     //printNumbers(values);
 
-    long start = System.currentTimeMillis();//시간 체크
+    long start = System.currentTimeMillis();
 
     // QuickSort 사용법에 맞춰 정렬을 수행한다.
     sorter.start(values, 0, values.length - 1);
 
     long end = System.currentTimeMillis();
-    System.out.printf("걸린시간: %d\n" ,end - start);
+    System.out.printf("걸린시간: %d\n", end - start);
 
-    //System.out.println("[정렬 후]------------------");
+    //System.out.println("[정렬 후]--------------------------");
     //printNumbers(values);
   }
 
-  static void printNumbers(int [] values) {
+  static void printNumbers(int[] values) {
     for (int  value : values) {
       System.out.print(value + ",");
     }
