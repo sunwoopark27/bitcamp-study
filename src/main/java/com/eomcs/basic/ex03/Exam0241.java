@@ -2,8 +2,9 @@
 package com.eomcs.basic.ex03;
 
 import java.util.ArrayList;
+import java.util.function.Consumer;
 
-public class Exam0310 {
+public class Exam0241 {
   public static void main(String[] args) {
 
     class Member {
@@ -58,8 +59,16 @@ public class Exam0310 {
     list.add(m2);
     list.add(m3);
 
-    list.forEach(item -> {
-      System.out.println(item);
-    });
+    Consumer<Member> action = new Consumer<Member>() {
+      @Override
+      public void accept(Member m) {
+        // forEach()에서 반복문을 돌릴 때
+        // Consumer 규칙에 따라
+        // 각 항목에 대해 이 메서드를 호출한다.
+        System.out.printf("이름: %s, 나이: %d\n", m.name, m.age);
+      }
+    };
+
+    list.forEach(action);
   }
 }
