@@ -39,6 +39,7 @@ public class Exam0750 {
     // => 스태틱 메서드 레퍼런스, 인스턴스 메서드 레퍼런스, 생성자 레퍼런스 
     Collection<String> c1 = prepareNames(ArrayList<String>::new, 
         "홍길동", "임꺽정", "유관순", "임꺽정");
+    // 자바코드 컴파일러는 다음의 자바코드로 변경한다.
     print(c1.iterator());
 
     System.out.println("------------------------");
