@@ -1,33 +1,38 @@
 package com.eomcs.io.ex01;
 
 import java.io.File;
-import java.io.FileFilter;
 
 public class Atest {
 
   public static void main(String[] args) throws Exception{
 
-    class JavaFilter implements FileFilter {
-      @Override
-      public boolean accept(File file) {
-        if(file.isFile() && file.getName().endsWith(".java"))
-          return true;
-        return false;
+    File dir = new File(".");
+    System.out.println(dir.getCanonicalPath());
+
+    printList(dir, 1);
+  }
+
+  static void printList(File dir, int level) {
+
+    File[] files = dir.listFiles();
+
+    for (File file : files) {
+      printIndent(level);
+
+      if(file.isDirectory() && !file.isHidden()) {
+        System.out.printf("%s\n", file.getName());
+        printList(file, level + 1);
+      }else if (file.isFile()) {
+        System.out.print("\\--");
+        System.out.printf("%s\n", file.getName());
       }
     }
 
-    File dir = new File(".");
+  }
 
-    JavaFilter javaFilter = new JavaFilter();
-
-    File[] files = dir.listFiles(javaFilter);
-
-    for(File file : files) {
-      System.out.printf("%s %12d %s\n",
-          file.isDirectory() ? "d" : "-",
-              file.length(),
-              file.getName());
+  static void printIndent(int level) {
+    for(int i = 0; i < level; i++) {
+      System.out.print("  "); 
     }
-
   }
 }
