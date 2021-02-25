@@ -17,6 +17,12 @@ public class Exam0510 {
     s.kor = 99;
     s.eng = 80;
     s.math = 92;
+
+    // 다음과 같이 임의로 값을 설저해봐야 소용없다.
+    // serialize 대상에서 제외된 필드(transient가 붙은 필드)는
+    s.sum = 300;
+    s.aver = 100;
+
     s.compute();
 
     // serialize 할 때 transient가 붙은 필드의 값은 제외된다.

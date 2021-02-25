@@ -1,19 +1,36 @@
 package com.eomcs.io.ex05;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class Atest {
-  public static void main(String[] args) throws IOException {
+public class Atest extends FileOutputStream {
+  public Atest(String filename) throws Exception {
+    super(filename);
+  }
+  byte[] buf = new byte[8192];
+  int cursor;
 
-    FileReader in = new FileReader("temp/test2.txt");
+  @Override
+  public void write(int b) throws IOException {
+    if(cursor == buf.length) {
+      super.write(buf);
+      cursor = 0;
+    }
 
-    BufferedReader in2 = new BufferdReader(in);
+    buf[cursor++] = (byte) b;
+  }
 
-    System.out.println(in2.readLine());
+  @Override
+  public void close() throws IOException {
+    this.flush();
+    super.close();
+  }
 
-    in.close();
-
+  @Override
+  public void flush() throws IOException {
+    if(cursor > 0) {
+      this.write(buf, 0, cursor);
+      cursor = 0;
+    }
   }
 }
