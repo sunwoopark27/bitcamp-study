@@ -18,7 +18,7 @@ public class Exam0810 {
       }
     }
     Factory f1 = new CarFactory();
-    Car car = (Car) f1.create();
+    printCar(new CarFactory());
 
     // 2) 익명 클래스로 인터페이스 구현체를 만든다.
     Factory f2 = new Factory() {
@@ -30,22 +30,23 @@ public class Exam0810 {
     Car car2 = (Car) f2.create();
 
     // 3) 람다로 인터페이스 구현체를 만든다.
-    Factory f3 = () -> new Car();
-    Car car3 = (Car) f3.create();
+    printCar(() -> new Car());
 
-    // 4) 기존에 존재하는 메서드로 인터페이스 구현체를 만든다.
-    Factory f4 = Exam0810::createCar;
-    Car car4 = (Car) f4.create();
+    // 4) 기존에 존재하는 메서드를 인터페이스 구현체를 만든다.
+    printCar(Exam0810::createCar);
 
-    // 5) 기존 클래스의 생성자로 인터페이스 구현체를 만든다.
-    Factory f5 = Car::new;
-    Car car5 = (Car) f5.create();
-
+    // 5) 기존 클래스의 생성자를 인터페이스 구현체를 만든다.
+    printCar(Car::new);
     System.out.println("완료!");
   }
 
   public static Car createCar() {
     return new Car();
+  }
+
+  public static void printCar(Factory factory) {
+    Object obj = factory.create();
+    System.out.printf("만든 객체: %s\n", obj);
   }
 
 }
