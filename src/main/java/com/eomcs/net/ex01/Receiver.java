@@ -24,7 +24,7 @@ public class Receiver {
     // - 클라이언트가 서버에 접속을 요청하면 그 정보를 "대기열"이라고 불리는 목록으로 관리한다.
     // - accept()를 호출하면 대기열에서 순서대로 꺼내 해당 클라이언트와 연결된 소켓을 만든다.
     Socket socket = serverSocket.accept();
-    System.out.println("클라이언트와 연결된 소켓 생성!");
+    System.out.println("클라이언트와 연결된 Socket 생성!");
 
     // 3) 소켓 객체를 통해 읽고 쓸 수 있도록 입출력 스트림을 얻는다.
     // - 연결된 클라이언트로 데이터를 보내고 받으려면 입출력 스트림을 꺼내야 한다.

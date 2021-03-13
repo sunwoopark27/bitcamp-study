@@ -16,7 +16,7 @@ public class Client0121 {
 
       System.out.println("서버와 연결되었음!");
 
-      // 서버에서 바이트 배열을 읽는다.
+      // 서버에서 보낸 바이트 배열을 읽는다.
       byte[] buf = new byte[100];
       int size = in.read(buf);
       System.out.printf("바이트 배열의 크기: %d\n", size);

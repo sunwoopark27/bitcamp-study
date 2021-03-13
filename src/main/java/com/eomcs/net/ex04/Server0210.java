@@ -13,6 +13,7 @@ public class Server0210 {
 
       System.out.println("서버 실행!");
 
+
       loop: while (true) {
         // 한 번 클라이언트와 연결되면
         // 요청을 받아서 처리한 후 응답하고
@@ -25,11 +26,11 @@ public class Server0210 {
 
           String name = in.readLine();
 
-          if(name.equals("stop")) {
+          if (name.equals("stop")) {
             out.println("Goodbye!");
             out.flush();
             break loop;
-          }else {            
+          } else {
             out.printf("%s 님 반갑습니다!\n", name);
             out.flush();
           }

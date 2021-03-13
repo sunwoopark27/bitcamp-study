@@ -15,7 +15,7 @@ public class CalcServer {
     while (true) {
       // stateful을 사용할 때 이점:
       // => 연결되어 있는 동안 클라이언트의 작업 결과를 계속 유지할 수 있다.
-      try (Socket socket = ss.accept()){
+      try (Socket socket = ss.accept()) {
         processRequest(socket);
       } catch (Exception e) {
         System.out.println("클라이언트 요청 처리 중 오류 발생!");
