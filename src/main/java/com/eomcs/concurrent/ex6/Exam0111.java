@@ -16,13 +16,10 @@ public class Exam0111 {
 
       @Override
       public void run() {
-        try {
-          for (int i = count; i > 0; i--) {
-            System.out.println("==> " + i);
-          }
-        } catch (Exception e) {
-          e.printStackTrace();
+        for (int i = count; i > 0; i--) {
+          System.out.println("==> " + i);
         }
+
       }
     }
 
