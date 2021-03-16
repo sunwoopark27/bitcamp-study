@@ -14,6 +14,7 @@ public class Exam0210 {
     // 람다 문법으로 익명 클래스를 만들 수 있다.
     Player p = () -> System.out.println("Player...");
     p.play();
+
   }
 }
 
