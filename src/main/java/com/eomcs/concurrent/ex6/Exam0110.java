@@ -19,7 +19,6 @@ public class Exam0110 {
         for (int i = count; i > 0; i--) {
           System.out.println("==> " + i);
         }
-
       }
     }
 
