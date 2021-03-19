@@ -37,7 +37,7 @@ public class Exam0710_07 {
       if (file.isDirectory() && !file.isHidden()) {
         System.out.printf("%s/\n", file.getName());
         printList(file, level + 1);
-      } else  if (file.isFile()) {
+      } else if (file.isFile()) {
         System.out.printf("%s\n", file.getName());
       }
     }
