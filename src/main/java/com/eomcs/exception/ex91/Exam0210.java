@@ -32,7 +32,7 @@ public class Exam0210 {
 
     try {
       // 예외가 발생할 수 있는 코드를 이 블록에 둔다.
-      int result = 100 / 0;
+      // int result = 100 / 0;
       System.out.printf("계산 결과 = %d\n", result);
 
     } catch (Throwable e) {
