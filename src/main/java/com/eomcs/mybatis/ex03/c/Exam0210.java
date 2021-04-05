@@ -1,4 +1,4 @@
-// SQL 문에 삽입할 파라미터 전달하기 - 일반 객체를 이용하여 여러 개의 값 넘기기
+// update 문 실행
 package com.eomcs.mybatis.ex03.c;
 
 import org.apache.ibatis.io.Resources;
@@ -13,10 +13,16 @@ public class Exam0210 {
         "com/eomcs/mybatis/ex03/c/mybatis-config.xml")).openSession();
 
     Board board = new Board();
-    board.setNo(3);
+    board.setNo(1);
     board.setTitle("제목 변경!!!");
     board.setContent("내용 변경!!!");
 
+    // update 문을 실행할 때는 update() 메서드를 호출한다.
+    // - 리턴 값은 executeUpdate()의 실행 결과이다.
+    // - 즉 update 된 데이터의 개수이다.
+    //
+    // 예) 게시글을 변경한다.
+    //
     int count = sqlSession.update("BoardMapper.update", board);
     System.out.printf("%d 개의 데이터를 변경 했음!\n", count);
 

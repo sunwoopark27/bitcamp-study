@@ -5,22 +5,27 @@
 
 <mapper namespace="BoardMapper">
   
-  <insert id="insert1" parameterType = "board">
+  <!-- insert(sqlId, Board) -->
+  <insert id="insert1" parameterType="board">
     insert into x_board(title,contents,created_date)
     values(#{title}, #{content}, now())
   </insert>
   
-  <insert id="insert2" parameterType = "map">
+  <!-- insert(sqlId, Map) -->
+  <insert id="insert2" parameterType="map">
     insert into x_board(title,contents,created_date)
     values(#{title}, #{content}, now())
   </insert>
   
-  <insert id="insert3" parameterType = "board" useGeneratedKeys="true" keyColumn = "board_id" keyProperty="no">
+  <!-- insert(sqlId, Board) -->
+  <insert id="insert3" parameterType="board" 
+          useGeneratedKeys="true" keyColumn="board_id" keyProperty="no">
     insert into x_board(title,contents,created_date)
     values(#{title}, #{content}, now())
   </insert>
   
-  <update id="update" parameterType = "board">
+  <!-- update(sqlId, Board) -->
+  <update id="update" parameterType="board">
     update x_board set
       title=#{title},
       contents=#{content}
@@ -28,10 +33,11 @@
       board_id=#{no}
   </update>
   
+  <!-- delete(sqlId, no) -->
   <delete id="delete" parameterType="int">
-    delete from x_board
-    where
-      board_id=#{id}
+    delete from x_board 
+    where 
+      board_id=#{no}
   </delete>
 </mapper>
 

@@ -5,7 +5,8 @@
 
 <mapper namespace="BoardMapper">
   
-  <insert id="insert" parameterType = "board">
+  <!-- insert(sqlId, Board) -->
+  <insert id="insert" parameterType="board">
     insert into x_board(title,contents,created_date)
     values(#{title}, #{content}, now())
   </insert>

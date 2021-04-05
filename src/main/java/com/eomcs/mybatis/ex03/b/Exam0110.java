@@ -24,8 +24,8 @@ public class Exam0110 {
     // 예) 특정 범위의 번호에 해당하는 게시글을 가져온다.
     //
     Map<String,Object> params = new HashMap<>();
-    params.put("startNo", 3);
-    params.put("endNo", 5);
+    params.put("startNo", 5);
+    params.put("endNo", 12);
 
     List<Board> boards = sqlSession.selectList("BoardMapper.selectBoard1", params);
 
@@ -40,6 +40,7 @@ public class Exam0110 {
     sqlSession.close();
     System.out.println("실행 완료!");
   }
+
 }
 
 

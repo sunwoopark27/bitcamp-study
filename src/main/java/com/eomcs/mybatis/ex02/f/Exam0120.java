@@ -1,4 +1,4 @@
-// SqlSession 사용법 - select 문 실행하기 : 자바 객체의 프로퍼티 이름과 컬럼명을 일치시키기 II
+// SqlSession 사용법 - selectOne()은 언제 사용? 결과가 0 또는 1개 일 때
 package com.eomcs.mybatis.ex02.f;
 
 import org.apache.ibatis.io.Resources;
@@ -12,11 +12,15 @@ public class Exam0120 {
     SqlSession sqlSession = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream(
         "com/eomcs/mybatis/ex02/f/mybatis-config.xml")).openSession();
 
-
-    Board b = sqlSession.selectOne("BoardMapper.selectBoard2", 100);
+    // selectOne()
+    // - select 결과가 0 또는 1개 일 때 호출할 수 있다.
+    // - 결과가 없으면 리턴 값은 null 이다. 
+    // 
+    Board b = sqlSession.selectOne("BoardMapper.selectBoard2", 9);
 
     if (b == null) {
       System.out.println("해당 번호의 게시글이 없습니다.");
+      return;
     }
 
     System.out.printf("%d,%s,%s,%s,%d\n",
