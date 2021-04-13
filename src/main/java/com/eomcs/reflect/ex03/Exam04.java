@@ -18,12 +18,16 @@ public class Exam04 {
 
     // 파라미터가 있는 메서드를 찾을 때 그 파라미터의 타입 정보를 넘겨야 한다.
     // 타입정보 = 클래스 정보 = Class 객체
+
     Class<?> parameterType = String.class;
     Method m = clazz.getMethod("m2", parameterType);
     System.out.println(m.getName());
 
-    parameterType = Class.forName("java.lang.String");
-    m = clazz.getMethod("m2", parameterType);
+    // 위와 같다.
+    Method m2 = clazz.getMethod("m2", String.class);
+    System.out.println(m2.getName());
+
+    m = clazz.getMethod("m2", Class.forName("java.lang.String"));
     System.out.println(m.getName());
 
     // primitive 타입도 클래스 정보가 있다.
@@ -34,6 +38,13 @@ public class Exam04 {
     Class<?> stringType = String.class;
     m = clazz.getMethod("m3", stringType, intType);
     System.out.println(m.getName());
+
+    m = clazz.getMethod("m3", String.class, int.class);
+    System.out.println(m.getName());
+
+    // 메서드의 파라미터 순서를 지켜야 한다.
+    //    m = clazz.getMethod("m3", int.class, String.class);
+    //    System.out.println(m.getName());
 
     System.out.println(clazz.getMethod("m3", String.class, int.class).getName());
   }
