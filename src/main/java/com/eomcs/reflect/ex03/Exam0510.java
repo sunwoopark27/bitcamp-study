@@ -4,7 +4,7 @@ package com.eomcs.reflect.ex03;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 
-public class Exam11 {
+public class Exam0510 {
   @SuppressWarnings("unchecked")
   public static void main(String[] args) throws Exception {
     Class<?> clazz = Car.class;
@@ -14,13 +14,14 @@ public class Exam11 {
       System.out.printf("%s:%s\n", f.getName(), f.getType().getName());
     }
 
+
     Constructor<Car> defaultConst = (Constructor<Car>) clazz.getConstructor();
     Car car = defaultConst.newInstance();
 
     // 1) private 필드는 일반적인 방식으로 접근할 수 없다.
-    //    car.maker = "비트자동차"; //컴파일 오류!
+    //    car.maker = "비트자동차"; // 컴파일 오류!
 
-    // 2) Reflection API를 사용하면 private 필드에 접근할 수 있다.
+    // 2) 다음과 같이 Reflection API를 사용하면 private 필드에 접근할 수 있다. 
     Field makerField = clazz.getDeclaredField("maker");
 
     // private modifier로 선언된 필드라 하더라도

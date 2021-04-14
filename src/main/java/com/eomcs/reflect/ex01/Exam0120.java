@@ -20,7 +20,8 @@ class B {
   }
 }
 
-public class Exam02 {
+
+public class Exam0120 {
 
   public static void main(String[] args) throws Exception {
     //    Class.forName("com.eomcs.reflect.ex01.B");
@@ -28,19 +29,15 @@ public class Exam02 {
 
     //    Class.forName("com.eomcs.reflect.ex01.B$C");
     // => 중첩 클래스는 "바깥클래스명$중첩클래스명" 형식의 이름을 갖는다.
-    // => 스태틱 중첩 클래스를 로딩할 때 바깥 클래스를 로딩하지는 않는다.
+    // => 스태틱 중첩 클래스를 로딩할 때는 바깥 클래스를 로딩하지는 않는다.
     //    스태틱 중첩 클래스 입장에서는 바깥 클래스가 패키지의 역할을 할 뿐이다.
     // => 바깥 클래스 파일이 존재하지 않더라도 실행 오류가 발생하지 않는다.
-    //
-    // 주의!
-    // => 자바 코드로 중첩 클래스를 표현할 때?
+    // 
+    // 주의! 
+    // => 자바 코드로 중첩 클래스를 표현할 때는
     //    클래스 이름에 $ 를 붙이지 않고 . 을 붙인다.
     //    com.eomcs.reflect.ex01.B.C obj;
     //    obj = new com.eomcs.reflect.ex01.B.C();
-
-    // Class.forName("com.eomcs.reflect.ex01.Exam02$A");
-    // => 이미 바깥 클래스가 로딩되어 있다면 다시 로딩하지 않는다.
-    // => 이미 중첩 클래스가 로딩되어 있다면 다시 로딩하지 않는다.
 
     System.out.println("실행 완료!");
   }

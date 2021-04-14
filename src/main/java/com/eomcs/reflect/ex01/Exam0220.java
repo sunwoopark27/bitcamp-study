@@ -1,4 +1,4 @@
-// Reflection API : forName() 활용 
+// Reflection API : forName() 활용
 package com.eomcs.reflect.ex01;
 
 import java.util.Scanner;
@@ -24,7 +24,7 @@ class Z {
 }
 
 
-public class Exam04 {
+public class Exam0220 {
 
   public static void main(String[] args) throws Exception {
     Scanner keyScan = new Scanner(System.in);

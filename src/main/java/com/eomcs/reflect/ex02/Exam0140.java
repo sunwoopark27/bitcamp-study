@@ -1,10 +1,11 @@
-// 배열의 항목 타입 알아내기 
-package com.eomcs.reflect.ex05;
+// 클래스 정보 추출 - 컬렉션의 값 타입
+package com.eomcs.reflect.ex02;
 
 import java.util.ArrayList;
 
-public class Exam0230 {
-  public static void main(String[] args) {
+public class Exam0140 {
+
+  public static void main(String[] args) throws Exception {
     ArrayList<Object> values = new ArrayList<>();
     values.add(100);
     values.add(100L);
@@ -14,17 +15,24 @@ public class Exam0230 {
     values.add('A');
     values.add("Hello");
     values.add(new int[] {100, 200, 300});
-    values.add(new String[]{"aaa", "bbb", "ccc"});
-    for (Object value : values) {
+    values.add(new String[] {"aaa", "bbb", "ccc"});
 
+    for (Object value : values) {
       printTypeInfo(value.getClass());
     }
   }
+
   private static void printTypeInfo(Class<?> type) {
-    if(type.getName().startsWith("[")) {
+    if (type.getName().startsWith("[")) {
       System.out.printf("=> %s[]\n", type.getComponentType().getName());
     } else {
-      System.out.printf("=> %s[]\n", type.getName());
+      System.out.printf("=> %s\n", type.getName());
     }
   }
+
 }
+
+
+
+
+

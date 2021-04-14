@@ -16,7 +16,7 @@ public class Exam0130 {
             Calculator.class, 
             Calculator2.class, 
             Calculator3.class}, 
-        // 3) 람다(lamda) 문법을 사용하여 InvocationHandler 구현하기 
+        // 3) 람다(lambda) 문법을 사용하여 InvocationHandler 구현하기
         (Object proxyObj, Method method, Object[] params) -> {
           // newProxyInstance()가 생성한 객체에 대해 메서드를 호출할 때마다 이 메서드가 호출된다.
           int a = (int) params[0]; // auto-unboxing => ((Integer)args[0]).intValue();
