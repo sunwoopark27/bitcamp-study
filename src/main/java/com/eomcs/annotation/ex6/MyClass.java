@@ -8,6 +8,10 @@ public class MyClass {
   //  @MyAnnotation
   int i; // 컴파일 오류!
 
-  @MyAnnotation
-  public void m() {} // OK!
+  //  @MyAnnotation
+  public void m(/*@MyAnnotation*/ int p) {
+    /*@MyAnnotation*/ int a;
+  } // OK!
+
+
 }
