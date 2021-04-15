@@ -9,3 +9,4 @@ package com.eomcs.annotation.ex2;
 public class MyClass {
 }
 
+// 컴파일 한 후 .class 파일을 확인해 보라!

@@ -29,7 +29,7 @@ public class Exam0110 {
       System.out.println("MyAnnotation을 추출할 수 없습니다!");
     } else {
       // 값을 꺼낼 때는 메서드 호출하듯이 꺼내면 된다.
-      System.out.println("MyAnnotation3.value=" + obj.value());
+      System.out.println("MyAnnotation.value=" + obj.value());
     }
 
     // => 유지정책 : SOURCE
@@ -37,8 +37,7 @@ public class Exam0110 {
     if (obj2 == null) {
       System.out.println("MyAnnotation2를 추출할 수 없습니다!");
     } else {
-      // 값을 꺼낼 때는 메서드 호출하듯이 꺼내면 된다.
-      System.out.println("MyAnnotation3.value=" + obj2.value());
+      System.out.println("MyAnnotation2.value=" + obj2.value());
     }
 
     // => 유지정책 : RUNTIME
@@ -46,7 +45,6 @@ public class Exam0110 {
     if (obj3 == null) {
       System.out.println("MyAnnotation3를 추출할 수 없습니다!");
     } else {
-      // 값을 꺼낼 때는 메서드 호출하듯이 꺼내면 된다.
       System.out.println("MyAnnotation3.value=" + obj3.value());
     }
 

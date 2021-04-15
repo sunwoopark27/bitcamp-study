@@ -1,7 +1,7 @@
 // 애노테이션 프로퍼티 타입
 package com.eomcs.annotation.ex6;
 
-// @MyAnnotation은 메서드와 타입(인터페이스와 클래스)에만 붙일 수 있다.
+// @MyAnnotation은 타입(인터페이스와 클래스)에만 붙일 수 있다.
 @MyAnnotation // OK!
 public class MyClass {
 
@@ -10,8 +10,7 @@ public class MyClass {
 
   //  @MyAnnotation
   public void m(/*@MyAnnotation*/ int p) {
-    /*@MyAnnotation*/ int a;
-  } // OK!
-
+    /*@MyAnnotationn*/ int a;
+  }
 
 }

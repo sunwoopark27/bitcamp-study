@@ -1,4 +1,4 @@
-// 애노테이션 적용 범위 - 메서
+// 애노테이션 적용 범위 - 메서드
 package com.eomcs.annotation.ex6;
 
 import java.lang.annotation.ElementType;

@@ -1,4 +1,4 @@
-// 애노테이션 적용 범위 - 로컬변수
+// 애노테이션 적용 범위 - 로컬 변수
 package com.eomcs.annotation.ex6;
 
 import java.lang.annotation.ElementType;
