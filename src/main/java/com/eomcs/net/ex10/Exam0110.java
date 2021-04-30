@@ -16,6 +16,8 @@ public class Exam0110 {
     }
     System.out.println();
 
+    System.out.println("----------------------------------");
+
     // Base64 인코딩
     // => 바이너리 데이터를 문자화시킨다.
     // => 바이너리 값을 6비트식 잘라서(2의 6승) 
