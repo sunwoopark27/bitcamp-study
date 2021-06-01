@@ -1,8 +1,10 @@
 // 프로퍼티 에디터 - String ==> java.sql.Date ; 변환기 사용하여 처리하기
 package com.eomcs.spring.ioc.ex07.c;
 
+import java.sql.Date;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.eomcs.spring.ioc.ex07.Car;
 
 public class Exam01 {
 
@@ -11,6 +13,20 @@ public class Exam01 {
         "com/eomcs/spring/ioc/ex07/c/application-context.xml");
 
     System.out.println(iocContainer.getBean("c1"));
+
+    // Ioc 컨테이너는 application-context.xml에 설정된 대로 다음과 같이 객체를 만든다.
+    Car c1 = new Car();
+    c1.setModel("티코");
+    c1.setMaker("비트자동차");
+    c1.setCc(Integer.valueOf("890"));
+    c1.setAuto(Boolean.valueOf("true"));
+
+    CustomDateEditor cde = new CustomDateEditor();
+    cde.setAsText("2021-6-1");
+
+    c1.setCreatedDate((Date)cde.getValue());
+
+    System.out.println(c1);
   }
 }
 
